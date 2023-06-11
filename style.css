@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Lato, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.header {
+  background: dodgerblue;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;;
+}
+
+h1 {
+  color: white;
+  font-size: 30px;
+}
+
+.game-container {
+  background-color: white;
+  padding-bottom: 30px;
+  margin: 10px;
+  max-width: 530px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 28px -6px rgba(0, 0, 0, 0.5);
+}
+
+.player-container, .computer-container {
+  margin: 50px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.far {
+  font-size: 50px;
+  margin-right: 40px;
+}
+
+#player .far:last-of-type, 
+#computer .far:last-of-type {
+ margin-right: 0;
+}
+
+#player .far, #player .choice {
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+#computer .far,
+#computer .choice {
+  color: rgb(241, 11, 11);
+  user-select: none;
+}
+
+.selected {
+  color: black !important;
+}
+
+.reset-icon {
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-text {
+  font-size: 40px;
+  margin: unset;
+  margin-top: 20px;
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .player-container, .computer-container {
+    margin: 50px 0 25px 25px;
+  }
+
+  .far {
+    margin: 10px;
+    font-size: 43px;
+  }
+
+  .reset-icon {
+    margin-top: 25px;
+    margin-left: 25px;
+  }
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+  .game-container {
+    min-height: 550px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .player-container, .computer-container {
+    margin: 43px 0 25px 20px;
+  }
+
+  .far {
+    font-size: 43px;
+  }
+
+  .reset-icon {
+    margin-top: 15px;
+  }
+
+  .result-container {
+    margin: 0 20px;
+  }
+}
+
+#confetti-canvas {
+  position: absolute;
+}
